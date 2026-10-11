@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Translator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>GitHub Translator</h1>
+
+      <label for="api-url">Endpoint da tradução</label>
+      <input
+        id="api-url"
+        type="text"
+        value="https://translate.argosopentech.com/translate"
+        placeholder="https://translate.argosopentech.com/translate"
+      />
+
+      <div class="actions">
+        <button id="translate-btn" class="primary">Traduzir página</button>
+        <button id="reset-btn" class="secondary">Restaurar texto</button>
+      </div>
+
+      <p id="status" class="status">Pronto para traduzir.</p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

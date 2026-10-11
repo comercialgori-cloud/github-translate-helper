@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Translator",
+  "version": "1.0.0",
+  "description": "Traduz textos em inglês do GitHub para português sem sair da página.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://translate.argosopentech.com/*",
+    "https://libretranslate.com/*",
+    "https://translate.terraprint.co/*",
+    "https://api.mymemory.translated.net/*"
+  ],
+  "action": {
+    "default_title": "Traduzir página do GitHub",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
